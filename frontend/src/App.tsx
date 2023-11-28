@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import { FC } from 'react';
+import styles from "./App.module.css"
+import Content from './components/Content/Content';
 
-function App() {
+const App:FC = () => {
   return (
-    <div className="App">
-      Hello world!
+    <div className={styles.App}>
+      <Content />
     </div>
   );
 }
 
-export default App;
+export default App
+
