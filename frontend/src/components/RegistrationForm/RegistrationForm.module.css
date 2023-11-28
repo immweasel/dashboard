@@ -8,15 +8,128 @@
   src: url("../../assets/fonts/Mulish/Mulish-Bold.ttf");
 }
 
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 533.14px;
+  width: 462.48px;
+  background-color: white;
+  border-radius: 30.83px;
+}
+
+.registerContainer {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 30.83px;
+}
+
 .title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10.28px;
+  font-size: 30.83px;
   font-family: MulishBold;
+  color: #000000;
+  font-weight: 700;
+  line-height: 38.54px;
 }
 
 .subtitle {
+  margin: 0;
+  padding: 0;
+  font-size: 17.99px;
   font-family: MulishMedium;
+  color: #717A97;
+  font-weight: 500;
+  line-height: 25.69px;
+}
+
+.authButton {
+  margin: 0;
+  padding: 0;
+  color: #436AF3;
+  cursor: pointer;
 }
 
 .input {
+  margin: 0;
+  padding: 0;
+  height: 56.53px;
+  width: 400.82px;
+  font-size: 17.99px;
   font-family: MulishMedium;
+  color: #A1ADCD;
+  font-weight: 500;
+  word-wrap: break-word;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.inputUser {
+  background-image: url('../../assets/images/inputUser.svg');
+  background-size: 20px;
+}
+
+.inputTg {
+  background-image: url('../../assets/images/inputTg.svg');
+  background-size: 46px;
+}
+
+.inputParol {
+  background-image: url('../../assets/images/inputParol.svg');
+  background-size: 20px;
+}
+
+.inputTrafic {
+  background-image: url('../../assets/images/inputTrafic.svg');
+  background-size: 20px;
+}
+
+.inputContainer {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15.42px;
+  top: 50%;
+  left: 10px;
+}
+
+
+.inputContainer input {
+  position: relative;
+  padding-left: 39.82px;
+  border-radius: 15.42px;
+  border: none;
+  background-color: #F0F2F5;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  margin-top: 21.84px;
+  margin-bottom: 21.84px;
+  font-family: MulishMedium;
+  height: 64.23px;
+  width: 400.82px;
+  background-color: #436AF3;
+  color: white;
+  border-radius: 15.42px;
+  font-size: 23.12px;
+  font-weight: 300;
+  line-height: 28.26px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
 }
 
