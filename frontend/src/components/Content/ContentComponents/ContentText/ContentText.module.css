@@ -13,6 +13,7 @@
     font-size: 68px;
     font-family: MulishBold;
     margin: 0;
+    text-align: left;
 }
 
 .underText {
@@ -20,4 +21,5 @@
     font-size: 20px;
     font-family: MulishMedium;
     margin-top: 25;
+    text-align: left;
 }
