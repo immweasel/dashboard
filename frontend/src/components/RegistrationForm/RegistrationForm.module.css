@@ -1,0 +1,22 @@
+@font-face {
+  font-family: MulishMedium;
+  src: url("../../assets/fonts/Mulish/Mulish-Medium.ttf");
+}
+
+@font-face {
+  font-family: MulishBold;
+  src: url("../../assets/fonts/Mulish/Mulish-Bold.ttf");
+}
+
+.title {
+  font-family: MulishBold;
+}
+
+.subtitle {
+  font-family: MulishMedium;
+}
+
+.input {
+  font-family: MulishMedium;
+}
+

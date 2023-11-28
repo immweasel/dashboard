@@ -13,10 +13,7 @@ export const configMainApi = {
   },
   credentials: 'include',
   endpoint: {
-    endpointRegister: '/signup',
-    endpointAuth: '/signin',
-    endpointOut: '/signout',
-    endpointCheckJwl: '/users/me',
-    endpointMovies: '/movies',
+    register: '/signup',
+    auth: '/signin'
   }
 }
