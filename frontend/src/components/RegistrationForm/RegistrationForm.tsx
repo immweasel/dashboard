@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import axios from 'axios';
 import styles from "./RegistrationForm.module.css";
+import PartnerComplete from '../PartnerComplete/PartnerComplete';
 
 interface RegistrationFormData {
   username: string;
@@ -11,21 +12,29 @@ interface RegistrationFormData {
 }
 
 const RegistrationForm: React.FC = () => {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<RegistrationFormData>();
+
   const [error, setError] = useState<string | null>(null);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSubmit: SubmitHandler<RegistrationFormData> = async (data) => {
     try {
       const response = await axios.post('/api/register', data);
       console.log('Успешно зарегистрированы', response.data);
+			setIsModalOpen(false);
     } catch (err) {
       setError('Ошибка при регистрации');
     }
   };
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
 
   return (
 		<div className={styles.formContainer}>
@@ -52,7 +61,7 @@ const RegistrationForm: React.FC = () => {
 						autoComplete='off'
 					/>
 					{errors.username && (
-						<p>
+						<p className={styles.errorName}>
 							Логин пользователя обязателен и должен быть не более 256 символов.
 						</p>
 					)}
@@ -71,7 +80,7 @@ const RegistrationForm: React.FC = () => {
 						autoComplete='off'
 					/>
 					{errors.tgUsername && (
-						<p>
+						<p className={styles.errorName}>
 							Юзернейм телеграмм аккаунта обязателен и должен быть не более 256
 							символов.
 						</p>
@@ -91,7 +100,7 @@ const RegistrationForm: React.FC = () => {
 						autoComplete='off'
 					/>
 					{errors.password && (
-						<p>Пароль обязателен и должен быть не более 64 символов.</p>
+						<p className={styles.errorName}>Пароль обязателен и должен быть не более 64 символов.</p>
 					)}
 				</div>
 
@@ -104,16 +113,23 @@ const RegistrationForm: React.FC = () => {
 						autoComplete='off'
 					/>
 					{errors.trafficSource && (
-						<p>Источник трафика должен быть не более 1024 символов.</p>
+						<p className={styles.errorName}>Источник трафика должен быть не более 1024 символов.</p>
 					)}
 				</div>
 
-				<button className={styles.submitButton} type='submit'>
+				<button className={styles.submitButton} 
+				type='submit'
+				onClick={(e) => {
+					e.preventDefault();
+					setIsModalOpen(true);
+				}}>
 					Стать партнером
 				</button>
 
 				{error && <p>{error}</p>}
+				
 			</form>
+			<PartnerComplete isOpen={isModalOpen} onClose={closeModal} />
 		</div>
 	)
 };
