@@ -1,0 +1,53 @@
+@font-face {
+    font-family: MulishMedium;
+    src: url("../../../../assets/fonts/Mulish/Mulish-Medium.ttf");
+}
+
+@font-face {
+    font-family: MulishBold;
+    src: url("../../../../assets/fonts/Mulish/Mulish-Bold.ttf");
+}
+
+.contentTelegramContainer {
+    margin-top: 100px;
+}
+
+.contentTelegram {
+    border-radius: 20px;
+    background: #13171E;
+    display: flex;
+    width: 260px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.contentTelegramFilling {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contentTelegramSpace {
+    flex: 1;
+}
+
+.contentTelegramText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contentTelegramTextTitle {
+    color: #828694;
+    font-family: MulishMedium;
+    font-size: 16px;
+    margin: 0;
+}
+
+.contentTelegramTextTag {
+    color: #FFF;
+    font-family: MulishBold;
+    font-size: 20px;
+    margin: 0
+}

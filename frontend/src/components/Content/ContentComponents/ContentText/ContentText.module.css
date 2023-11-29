@@ -8,18 +8,24 @@
     src: url("../../../../assets/fonts/Mulish/Mulish-Bold.ttf");
 }
 
+.contentText {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
 .earnNow {
     color: #FFF;
     font-size: 68px;
     font-family: MulishBold;
     margin: 0;
     text-align: left;
+    white-space: nowrap;
 }
 
 .underText {
     color: #82848E;
     font-size: 20px;
     font-family: MulishMedium;
-    margin-top: 25;
+    margin-top: 25px;
     text-align: left;
 }

@@ -3,7 +3,7 @@ import styles from './ContentText.module.css'
 
 const ContentText: FC = () => {
 	return (
-		<div>
+		<div className={styles.contentText}>
 			<p className={styles.earnNow}>Начни зарабатывать</p>
 			<p className={styles.earnNow}>Прямо сейчас</p>
 			<p className={styles.underText}>
