@@ -6,10 +6,10 @@ const ContentText: FC = () => {
 		<div className={styles.contentText}>
 			<p className={styles.earnNow}>Начни зарабатывать</p>
 			<p className={styles.earnNow}>Прямо сейчас</p>
-			<p className={styles.underText}>
-				После регистрации с вами свяжется менеджер - ответит на все вопросы и
-				поможет с запуском!
+			<p className={styles.firstUnderText}>
+				После регистрации с вами свяжется менеджер - ответит на все
 			</p>
+			<p className={styles.secondUnderText}>вопросы и поможет с запуском!</p>
 		</div>
 	)
 }

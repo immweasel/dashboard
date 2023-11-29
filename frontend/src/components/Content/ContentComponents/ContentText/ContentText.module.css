@@ -22,10 +22,20 @@
     white-space: nowrap;
 }
 
-.underText {
+.firstUnderText {
     color: #82848E;
     font-size: 20px;
     font-family: MulishMedium;
     margin-top: 25px;
+    margin-bottom: 0px;
     text-align: left;
+}
+
+.secondUnderText {
+    color: #82848E;
+    font-size: 20px;
+    font-family: MulishMedium;
+    text-align: left;
+   margin-top: 0px;
+   margin-bottom: 25px;
 }
