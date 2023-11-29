@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -30,7 +30,7 @@ const RegistrationForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<RegistrationFormData> = async (data) => {
     try {
-      const response = await axios.post('/api/register', data);
+      const response = await axios.post('/api/signup', data);
       console.log('Успешно зарегистрированы', response.data);
 			setIsModalOpen(false);
     } catch (err) {
@@ -38,9 +38,24 @@ const RegistrationForm: React.FC = () => {
     }
   };
 
-	const closeModal = () => {
-		setIsModalOpen(false);
-	};
+	const closeModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
+	useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+
+  }, [closeModal]);
 
   return (
 		<div className={styles.formContainer}>

@@ -4,6 +4,7 @@ import styles from "./App.module.css"
 import Content from './components/Content/Content';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import AuthForm from './components/AuthForm/AuthForm';
+import DashBoard from './components/Dashboard/DashBoard';
 
 const CombinedComponents: FC = () => {
   return (
@@ -22,6 +23,7 @@ const App:FC = () => {
           <Route path="/" element={<CombinedComponents />} />
           <Route path="/signup" element={<RegistrationForm />} />
           <Route path="/signin" element={<AuthForm />} />
+          <Route path="/dashboard" element={<DashBoard />} />
         </Routes>
       </div>
     </Router>

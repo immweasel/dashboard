@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from "./AuthForm.module.css";
 import PartnerComplete from '../PartnerComplete/PartnerComplete';
@@ -15,6 +15,8 @@ interface AuthFormData {
 
 const AuthForm: React.FC = () => {
 
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -26,11 +28,11 @@ const AuthForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<AuthFormData> = async (data) => {
     try {
-      const response = await axios.post('/api/register', data);
-      console.log('Успешно зарегистрированы', response.data);
-			setIsModalOpen(false);
+      const response = await axios.post('/api/signin', data);
+      console.log('Успешная авторизация', response.data);
+			navigate('/dashboard');
     } catch (err) {
-      setError('Ошибка при регистрации');
+      setError('Ошибка при авторизации');
     }
   };
 
@@ -90,7 +92,7 @@ const AuthForm: React.FC = () => {
 				type='submit'
 				onClick={(e) => {
 					e.preventDefault();
-					setIsModalOpen(true);
+          navigate('/dashboard');
 				}}>
 					Войти
 				</button>
