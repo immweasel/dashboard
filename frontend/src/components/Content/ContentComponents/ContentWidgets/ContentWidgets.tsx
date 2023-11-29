@@ -32,7 +32,7 @@ const ContentWidgets: FC = () => {
 					alt='lineWidget'
 				/>
 				<div className={styles.widgetStatsImgs}>
-					<img src={moneyWidget} alt='moneyWidget' />
+					<img className={styles.widgetStatsMoneyImg} src={moneyWidget} alt='moneyWidget' />
 					<img src={onlineWidget} alt='onlineWidget' />
 				</div>
 			</div>
