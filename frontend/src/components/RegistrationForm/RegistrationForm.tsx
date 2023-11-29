@@ -3,6 +3,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import axios from 'axios';
 import styles from "./RegistrationForm.module.css";
 import PartnerComplete from '../PartnerComplete/PartnerComplete';
+import inputUser from '../../assets/images/inputUser.svg';
+import inputTg from '../../assets/images/inputTg.svg';
+import inputParol from '../../assets/images/inputParol.svg';
+import inputTrafic from '../../assets/images/inputTrafic.svg';
+
 
 interface RegistrationFormData {
   username: string;
@@ -49,8 +54,9 @@ const RegistrationForm: React.FC = () => {
 				</div>
 
 				<div className={styles.inputContainer}>
+					<img className={`${styles.icon} ${styles.iconUser}`} src={inputUser} alt='иконка юзера' />
 					<input
-						className={`${styles.input} ${styles.inputUser}`}
+						className={styles.input}
 						type='text'
 						{...register('username', {
 							required: true,
@@ -58,7 +64,6 @@ const RegistrationForm: React.FC = () => {
 							maxLength: 256,
 						})}
 						placeholder='Логин'
-						autoComplete='off'
 					/>
 					{errors.username && (
 						<p className={styles.errorName}>
@@ -68,8 +73,9 @@ const RegistrationForm: React.FC = () => {
 				</div>
 
 				<div className={styles.inputContainer}>
+					<img className={`${styles.icon} ${styles.iconTg}`} src={inputTg} alt='иконка тг' />
 					<input
-						className={`${styles.input} ${styles.inputTg}`}
+						className={styles.input}
 						type='text'
 						{...register('tgUsername', {
 							required: true,
@@ -77,7 +83,6 @@ const RegistrationForm: React.FC = () => {
 							maxLength: 256,
 						})}
 						placeholder='@username'
-						autoComplete='off'
 					/>
 					{errors.tgUsername && (
 						<p className={styles.errorName}>
@@ -88,8 +93,9 @@ const RegistrationForm: React.FC = () => {
 				</div>
 
 				<div className={styles.inputContainer}>
+					<img className={`${styles.icon} ${styles.iconParol}`} src={inputParol} alt='иконка пароля' />
 					<input
-						className={`${styles.input} ${styles.inputParol}`}
+						className={styles.input}
 						type='password'
 						{...register('password', {
 							required: true,
@@ -97,7 +103,6 @@ const RegistrationForm: React.FC = () => {
 							maxLength: 64,
 						})}
 						placeholder='Пароль'
-						autoComplete='off'
 					/>
 					{errors.password && (
 						<p className={styles.errorName}>Пароль обязателен и должен быть не более 64 символов.</p>
@@ -105,12 +110,12 @@ const RegistrationForm: React.FC = () => {
 				</div>
 
 				<div className={styles.inputContainer}>
+					<img className={`${styles.icon} ${styles.iconTrafic}`} src={inputTrafic} alt='иконка трафика' />
 					<input
-						className={`${styles.input} ${styles.inputTrafic}`}
+						className={styles.input}
 						type='text'
 						{...register('trafficSource', { maxLength: 1024 })}
 						placeholder='Источник трафика'
-						autoComplete='off'
 					/>
 					{errors.trafficSource && (
 						<p className={styles.errorName}>Источник трафика должен быть не более 1024 символов.</p>
