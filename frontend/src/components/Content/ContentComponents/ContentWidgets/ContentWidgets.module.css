@@ -20,16 +20,29 @@
     gap: 90px;
 }
 
+.widgetRevShareContainer {
+    padding-top: 3.62px;
+    padding-right: 34px;
+    width: 253.448px;
+    height: 137.586px;
+    transform: rotate(-4.93deg);
+    border-radius: 24.138px;
+    background: linear-gradient(224deg, #9F5FF2 0%, rgba(255, 255, 255, 0.00) 82.71%), linear-gradient(102deg, #FFF 19.17%, #EEF1F5 100%);
+}
+
 .widgetRevShare {
-    background: white;
-    border-radius: 24px;
+    padding-left: 34px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    width: 246.212px;
+    height: 130.344px;
+    border-radius: 24.138px;
+    background: linear-gradient(101deg, #FFF 19.17%, #EEF1F5 100%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    padding: 22px;
+    align-items: flex-start;
     gap: 6px;
-    transform: rotate(-5deg);
 }
 
 .widgetRevShareUpperText {
@@ -46,14 +59,28 @@
     margin: 0;
 }
 
+.widgetPaymentsContainer {
+    width: 347.5px;
+    height: 149.067px;
+    transform: rotate(3.939deg);
+    padding-top: 5px;
+    padding-bottom: 12px;
+    padding-right: 31px;
+    border-radius: 24.138px;
+    background: linear-gradient(224deg, #9F5FF2 0%, rgba(255, 255, 255, 0.00) 82.71%), linear-gradient(102deg, #FFF 19.17%, #EEF1F5 100%);
+}
+
 .widgetPayments {
-    border-radius: 24px;
-    background: white;
+    padding-top: 12px;
+    width: 341.212px;
+    height: 141.344px;
+    padding-left: 34px;
+    padding-bottom: 6px;
+    border-radius: 24.138px;
+    background: linear-gradient(101deg, #FFF 19.17%, #EEF1F5 100%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
-    transform: rotate(4deg);
 }
 
 .widgetPaymentsUpperText {
