@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from "./App.module.css"
 import Content from './components/Content/Content';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+import AuthForm from './components/AuthForm/AuthForm';
 
 const CombinedComponents: FC = () => {
   return (
@@ -20,6 +21,7 @@ const App:FC = () => {
         <Routes>
           <Route path="/" element={<CombinedComponents />} />
           <Route path="/signup" element={<RegistrationForm />} />
+          <Route path="/signin" element={<AuthForm />} />
         </Routes>
       </div>
     </Router>

@@ -2,7 +2,8 @@ export const nameRegex = '[A-Za-zА-Яа-яЁё\\s\\-]+';
 
 export const endpoints = {
   register: '/signup',
-  auth: '/signin'
+  auth: '/signin',
+  dashbord: '/dashboard'
 }
 
 export const configMainApi = {

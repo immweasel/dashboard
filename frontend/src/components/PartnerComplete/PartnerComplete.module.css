@@ -45,6 +45,11 @@
   justify-self: center;
   cursor: pointer;
   border: none;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #8fc5fa;
 }
 
 .overlay {
