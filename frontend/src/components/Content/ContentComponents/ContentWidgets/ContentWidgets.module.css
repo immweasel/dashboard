@@ -327,8 +327,8 @@
 
     /* myStats */
     .widgetStats {
-        width: 350px;
-        height: 160px;
+        width: 356.288px;
+        height: 166.723px;
         gap: 10px;
         margin-left: 0px;
     }
@@ -355,6 +355,93 @@
         transform: rotate(6deg);  
         top: 0px;
         left: -20px;
+    }
+
+    .widgetStatsUnderText {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .widget {
+        margin-top: 30px;
+        gap:30px;
+    }
+    .firstLineWidgets {
+        gap: 30px;
+    }
+    .widgetPaymentsContainer {
+        width: 295.288px;
+        height: 136.723px;
+    }
+
+    .widgetPayments {
+        width: 290px;
+        height: 130px;
+        padding-left: 2px;
+        padding-bottom: 6px;
+        padding-top: 0px;
+    }
+    .widgetRevShareContainer {
+        width: 295.288px;
+        height: 136.723px;
+    }
+
+    .widgetRevShare {
+        width: 290px;
+        height: 130px;
+    }
+    .widgetPaymentsUpperText {
+        font-size: 26px;
+    }
+
+    .widgetPaymentsMiddleText {
+        padding-top: 8px;
+        font-size: 20px;
+    }
+
+    .widgetPaymentsLowerText {
+        font-size: 20px;
+    }
+    .widgetRevShareUpperText {
+        font-size: 26px;
+    }
+
+    .widgetRevShareLowerText {
+        font-size: 20px;
+    }
+    .widgetStatsText {
+        font-size: 26px;
+    }
+
+    /* myStats */
+    .widgetStats {
+        width: 295.288px;
+        height: 136.723px;
+        gap: 10px;
+        margin-left: 0px;
+    }
+
+    .widgetStatsText {
+        font-size: 16px;
+        padding: 7px;
+    }
+
+
+    .widgetStatsImgs {
+        left: 130px;
+        top: 3px;
+    }
+
+    .widgetStatsMoneyImg {
+        transform: rotate(11deg);  
+    }
+
+    .widgetStatsLineImg {
+        width: 294px;   
+        transform: rotate(6deg);  
+        top: 7px;
+        left: 2px;
     }
 
     .widgetStatsUnderText {
