@@ -1,3 +1,4 @@
 .contentIcons {
     cursor: pointer;
+    z-index: 2;
 }

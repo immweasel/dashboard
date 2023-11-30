@@ -23,3 +23,10 @@
         height: auto;
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .App {
+        padding-right: 3vh;
+        padding-left: 3vh;
+    }
+}

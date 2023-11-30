@@ -13,3 +13,17 @@
     top: 0;
     left: 0;
 }
+
+@media screen and (max-width: 1600px) {
+    .content {
+        padding-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .contentGrid {
+        display: none;
+    }
+
+}
