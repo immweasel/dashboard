@@ -5,7 +5,7 @@ import tgLogo  from '../../../../assets/images/tgLogo.svg'
 const ContentTelegram: FC = () => {
 	return (
 		<div className={styles.contentTelegramContainer}>
-			<div className={styles.contentTelegram}>
+			<button className={styles.contentTelegram}>
 				<div className={styles.contentTelegramFilling}>
 					<div className={styles.contentTelegramIcon}>
 						<img alt='tgIcon' src={tgLogo} />
@@ -16,7 +16,7 @@ const ContentTelegram: FC = () => {
 					</div>
 				</div>
 				<div className={styles.contentTelegramSpace}></div>
-			</div>
+			</button>
 		</div>
 	)
 }

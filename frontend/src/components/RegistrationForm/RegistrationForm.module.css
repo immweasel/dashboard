@@ -170,3 +170,9 @@
   color: red;
 }
 
+
+@media screen and (max-width: 1400px) {
+  .formContainer {
+    padding-bottom: 80px;
+  }
+}

@@ -21,6 +21,7 @@
 }
 
 .widgetRevShareContainer {
+    cursor: pointer;
     padding-top: 3.62px;
     padding-right: 34px;
     width: 253.448px;
@@ -60,6 +61,7 @@
 }
 
 .widgetPaymentsContainer {
+    cursor: pointer;
     width: 347.5px;
     height: 149.067px;
     transform: rotate(3.939deg);
@@ -71,11 +73,11 @@
 }
 
 .widgetPayments {
-    padding-top: 12px;
     width: 341.212px;
     height: 141.344px;
     padding-left: 34px;
     padding-bottom: 6px;
+    padding-top: 12px;
     border-radius: 24.138px;
     background: linear-gradient(101deg, #FFF 19.17%, #EEF1F5 100%);
     display: flex;
@@ -106,6 +108,7 @@
 }
 
 .widgetStats {
+    cursor: pointer;
     width: 450px;
     height: 170px;
     transform: rotate(-8deg);
@@ -147,4 +150,57 @@
     transform: rotate(6deg);  
     top: 10px;
     left: 80px;
+}
+
+@media screen and (max-width: 1400px) {
+    .widget {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+    }
+    .firstLineWidgets {
+        gap: 40px;
+    }
+    .widgetRevShareContainer {
+        width: 347.5px;
+        height: 149.067px;
+        transform: rotate(0deg);
+        padding-top: 3px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+
+    .widgetRevShare {
+        width: 341.212px;
+        height: 141.344px;
+        padding-left: 0px;
+        padding-bottom: 5px;
+        padding-top: 0px;
+        align-items: center;
+    }
+
+    .widgetPaymentsContainer {
+        transform: rotate(0deg);
+        padding-top: 3px;
+        padding-bottom: 0px;
+        padding-right:0px;
+    }
+
+    .widgetPayments {
+        padding-top: 6px;
+        padding-left: 3px;
+        padding-bottom: 5px;
+        border-radius: 24.138px;
+        align-items: center;
+    }
+    .widgetStats {
+        transform: rotate(0deg);
+        display: flex;
+        align-self: center;
+        margin: 0;
+    }
+    .widgetStatsText {
+        font-size: 25px;
+    }
 }
