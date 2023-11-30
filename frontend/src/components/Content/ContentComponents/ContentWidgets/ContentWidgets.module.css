@@ -204,3 +204,160 @@
         font-size: 25px;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .widget {
+        margin-top: 30px;
+        gap:30px;
+    }
+    .firstLineWidgets {
+        gap: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .widgetPaymentsContainer {
+        width: 456.288px;
+        height: 177.723px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+
+    .widgetPayments {
+        width: 450px;
+        height: 170px;
+        padding-left: 2px;
+        padding-bottom: 6px;
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .widgetRevShareContainer {
+        width: 456.288px;
+        height: 177.723px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        padding-right: 1px;
+    }
+
+    .widgetRevShare {
+        width: 450px;
+        height: 170px;
+        padding-left: 0px;
+        padding-bottom: 4px;
+        padding-top: 0px;
+    }
+    .widgetPaymentsUpperText {
+        font-size: 46px;
+    }
+
+    .widgetPaymentsMiddleText {
+        padding-top: 8px;
+        font-size: 28px;
+    }
+
+    .widgetPaymentsLowerText {
+        font-size: 28px;
+    }
+    .widgetRevShareUpperText {
+        font-size: 48px;
+    }
+
+    .widgetRevShareLowerText {
+        font-size: 28px;
+    }
+    .widgetStatsText {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+     .widget {
+        margin-top: 30px;
+        gap:30px;
+    }
+    .firstLineWidgets {
+        gap: 30px;
+    }
+    .widgetPaymentsContainer {
+        width: 356.288px;
+        height: 166.723px;
+    }
+
+    .widgetPayments {
+        width: 350px;
+        height: 160px;
+        padding-left: 2px;
+        padding-bottom: 6px;
+        padding-top: 0px;
+    }
+    .widgetRevShareContainer {
+        width: 356.288px;
+        height: 166.723px;
+    }
+
+    .widgetRevShare {
+        width: 350px;
+        height: 160px;
+    }
+    .widgetPaymentsUpperText {
+        font-size: 36px;
+    }
+
+    .widgetPaymentsMiddleText {
+        padding-top: 8px;
+        font-size: 22px;
+    }
+
+    .widgetPaymentsLowerText {
+        font-size: 22px;
+    }
+    .widgetRevShareUpperText {
+        font-size: 36px;
+    }
+
+    .widgetRevShareLowerText {
+        font-size: 22px;
+    }
+    .widgetStatsText {
+        font-size: 26px;
+    }
+
+    /* myStats */
+    .widgetStats {
+        width: 350px;
+        height: 160px;
+        gap: 10px;
+        margin-left: 0px;
+    }
+
+    .widgetStatsText {
+        font-size: 23px;
+        padding: 9px;
+        margin: 0;
+    }
+
+
+    .widgetStatsImgs {
+        position: absolute;
+        padding-top: 0;
+        left: 185px;
+        top: 12px;
+    }
+
+    .widgetStatsMoneyImg {
+        transform: rotate(8deg);  
+    }
+
+    .widgetStatsLineImg {
+        transform: rotate(6deg);  
+        top: 0px;
+        left: -20px;
+    }
+
+    .widgetStatsUnderText {
+        white-space: nowrap;
+    }
+}

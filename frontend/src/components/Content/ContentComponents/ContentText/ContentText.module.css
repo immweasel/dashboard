@@ -22,6 +22,10 @@
     white-space: nowrap;
 }
 
+.mobileUnderText {
+    display: none;
+}
+
 .firstUnderText {
     color: #82848E;
     font-size: 20px;
@@ -36,6 +40,66 @@
     font-size: 20px;
     font-family: MulishMedium;
     text-align: left;
-   margin-top: 0px;
-   margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .contentText {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .earnNow {
+        font-size: 56px;
+    }
+    .firstUnderText {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    .secondUnderText {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .contentText {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .earnNow {
+        font-size: 40px;
+    }
+    .firstUnderText {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    .secondUnderText {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contentText {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .earnNow {
+        font-size: 37px;
+    }
+
+    .mobileUnderText {
+        display: flex;
+        color: #82848E;
+        font-family: MulishMedium;
+        text-align: left;
+        font-size: 16px;
+
+    }
+    .firstUnderText {
+        display: none;
+    }
+    .secondUnderText {
+        display: none;
+    }
+
 }
