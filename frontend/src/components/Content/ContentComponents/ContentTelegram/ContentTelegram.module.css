@@ -19,6 +19,7 @@
     width: 260px;
     cursor: pointer;
     padding: 15px;
+    border: 0px;
 }
 
 .contentTelegramFilling {
@@ -50,4 +51,12 @@
     font-family: MulishBold;
     font-size: 20px;
     margin: 0
+}
+
+@media screen and (max-width: 1400px) {
+    .contentTelegramContainer {
+        margin-top: 80px;
+        display: flex;
+        align-self: center;
+    }
 }

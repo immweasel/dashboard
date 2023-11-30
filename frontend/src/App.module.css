@@ -7,7 +7,19 @@
     align-items: center;
     padding-right: 10vh;
     padding-left: 10vh;
+    gap: 100px;
 }
-/* @media screen and (max-width: 1300) {
+@media screen and (max-width: 1600px) {
+    .App {
+        padding-right: 5vh;
+        padding-left: 5vh;
+        gap: 50px;
+    }
+}
 
-} */
+@media screen and (max-width: 1400px) {
+    .App {
+        flex-direction: column;
+        height: auto;
+    }
+}
