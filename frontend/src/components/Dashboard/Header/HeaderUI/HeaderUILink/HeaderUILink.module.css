@@ -1,0 +1,25 @@
+.createLinkBtn {
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    outline: none;
+    border: none;
+    align-items: center;
+    gap: 10px;
+    background: var(--white-white, #FFF);
+    font-family: InterRegular;
+    font-size: 20px;
+}
+
+.createLinkText {
+    color: var(--Primary-Text-Color, #637381)
+}
+
+.createLinkBtn:hover .createLinkText {
+    color: var(--blue-blue-light, #5475E5);
+}
+
+.createLinkBtn:hover .createLinkImg * {
+    fill: var(--blue-blue-light, #5475E5);
+}
+

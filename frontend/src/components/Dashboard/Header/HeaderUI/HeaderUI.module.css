@@ -1,0 +1,12 @@
+@font-face {
+    font-family: InterRegular;
+    src: url("../../../../assets/fonts/Inter/Inter-Regular.ttf");
+}
+
+
+.headerUI {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
