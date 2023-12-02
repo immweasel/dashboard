@@ -8,19 +8,19 @@ import DashBoard from './components/Dashboard/DashBoard';
 
 const CombinedComponents: FC = () => {
   return (
-    <>
+    <div className={styles.combinedComponents}>
       <Content />
       <RegistrationForm />
-    </>
+    </div>
   );
 }
 
 const App:FC = () => {
   return (
     <Router>
-      <div className={styles.App}>
+      <div>
         <Routes>
-          <Route path="/" element={<CombinedComponents />} />
+          <Route path="/" element={<CombinedComponents/>} />
           <Route path="/signup" element={<RegistrationForm />} />
           <Route path="/signin" element={<AuthForm />} />
           <Route path="/dashboard" element={<DashBoard />} />

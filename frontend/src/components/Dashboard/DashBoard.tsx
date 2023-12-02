@@ -1,11 +1,15 @@
 import React from 'react';
+import Header from './Header/Header';
+import styles from './DashBoard.module.css'
 
 const DashBoard: React.FC = () => {
   return (
-    <div>
-      <h1>Тут будет дашборд</h1>
-    </div>
-  );
+		<div className={styles.dashboard}>
+			<div className={styles.dashboardContainer}>
+				<Header />
+			</div>
+		</div>
+	)
 };
 
 export default DashBoard;

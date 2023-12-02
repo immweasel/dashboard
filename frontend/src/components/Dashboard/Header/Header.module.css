@@ -1,0 +1,21 @@
+@font-face {
+    font-family: InterRegular;
+    src: url("../../../assets/fonts/Inter/Inter-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: InterMedium;
+    src: url("../../../assets/fonts/Inter/Inter-Medium.ttf");
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.249px solid var(--Stroke, #DFE4EA);
+    background: var(--white-white, #FFF);
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
