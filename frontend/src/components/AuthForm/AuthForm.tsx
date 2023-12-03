@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from "./AuthForm.module.css";
 import PartnerComplete from '../PartnerComplete/PartnerComplete';
 import inputUser from '../../assets/images/inputUser.svg';
 import inputParol from '../../assets/images/inputParol.svg';
+import { Context } from '../../index';
+import api from '../../utils/MainApi';
 
 
 interface AuthFormData {
@@ -13,7 +15,11 @@ interface AuthFormData {
   password: string;
 }
 
-const AuthForm: React.FC = () => {
+const AuthForm: React.FC<{ toggleForm: () => void }> = ({ toggleForm }) => {
+
+	const [login, setLogin] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
+	const {store} = useContext(Context);
 
   const navigate = useNavigate();
 
@@ -28,8 +34,8 @@ const AuthForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<AuthFormData> = async (data) => {
     try {
-      const response = await axios.post('/api/signin', data);
-      console.log('Успешная авторизация', response.data);
+      // const response = await api.post('/api/auth/login', data);
+      // console.log('Успешная авторизация', response.data);
 			navigate('/dashboard');
     } catch (err) {
       setError('Ошибка при авторизации');
@@ -47,7 +53,7 @@ const AuthForm: React.FC = () => {
 					<h2 className={styles.title}>Вход</h2>
 					<p className={styles.subtitle}>
 						У вас нет аккаунта?{' '}
-						<Link className={styles.authButton} to='/signup'>Зарегистрироваться</Link>
+						<button className={styles.authButton} onClick={() => toggleForm()} type='button'>Зарегистрироваться</button>
 					</p>
 					{error && <p>{error}</p>}
 				</div>
@@ -62,6 +68,8 @@ const AuthForm: React.FC = () => {
 							minLength: 1,
 							maxLength: 256,
 						})}
+						onChange={e => setLogin(e.target.value)}
+						value={login}
 						placeholder='Логин'
 					/>
 					{errors.username && (
@@ -81,6 +89,8 @@ const AuthForm: React.FC = () => {
 							minLength: 1,
 							maxLength: 64,
 						})}
+						onChange={e => setPassword(e.target.value)}
+						value={password}
 						placeholder='Пароль'
 					/>
 					{errors.password && (
@@ -90,10 +100,8 @@ const AuthForm: React.FC = () => {
 
 				<button className={styles.submitButton} 
 				type='submit'
-				onClick={(e) => {
-					e.preventDefault();
-          navigate('/dashboard');
-				}}>
+				onClick={() => store.login(login, password)}
+				>
 					Войти
 				</button>
 

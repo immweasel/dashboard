@@ -6,9 +6,10 @@
     display: flex;
     align-items: center;
     padding-right: 10vh;
-    padding-left: 10vh;
+    padding-left: 15vh;
     gap: 100px;
 }
+
 @media screen and (max-width: 1600px) {
     .combinedComponents {
         padding-right: 5vh;

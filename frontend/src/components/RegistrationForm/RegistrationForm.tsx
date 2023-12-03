@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from "./RegistrationForm.module.css";
 import PartnerComplete from '../PartnerComplete/PartnerComplete';
@@ -8,6 +7,8 @@ import inputUser from '../../assets/images/inputUser.svg';
 import inputTg from '../../assets/images/inputTg.svg';
 import inputParol from '../../assets/images/inputParol.svg';
 import inputTrafic from '../../assets/images/inputTrafic.svg';
+import { Context } from '../../index';
+import api from '../../utils/MainApi';
 
 
 interface RegistrationFormData {
@@ -17,7 +18,12 @@ interface RegistrationFormData {
   trafficSource?: string;
 }
 
-const RegistrationForm: React.FC = () => {
+const RegistrationForm: React.FC<{ toggleForm: () => void }> = ({ toggleForm }) => {
+
+	const [login, setLogin] = useState<string>('');
+	const [username, setUsername] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
+	const {store} = useContext(Context);
 
   const {
     register,
@@ -30,9 +36,9 @@ const RegistrationForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<RegistrationFormData> = async (data) => {
     try {
-      const response = await axios.post('/api/signup', data);
-      console.log('Успешно зарегистрированы', response.data);
-			setIsModalOpen(false);
+      // const response = await api.post('/api/auth/register', data);
+			setIsModalOpen(true);
+      // console.log('Успешно зарегистрированы', response.data);
     } catch (err) {
       setError('Ошибка при регистрации');
     }
@@ -64,7 +70,7 @@ const RegistrationForm: React.FC = () => {
 					<h2 className={styles.title}>Регистрация</h2>
 					<p className={styles.subtitle}>
 						У вас уже есть аккаунт?{' '}
-						<Link className={styles.authButton} to='/signin'>Войти</Link>
+						<button className={styles.authButton} onClick={() => toggleForm()} type='button'>Войти</button>
 					</p>
 					{error && <p>{error}</p>}
 				</div>
@@ -79,6 +85,8 @@ const RegistrationForm: React.FC = () => {
 							minLength: 1,
 							maxLength: 256,
 						})}
+						onChange={e => setLogin(e.target.value)}
+						value={login}
 						placeholder='Логин'
 					/>
 					{errors.username && (
@@ -98,6 +106,8 @@ const RegistrationForm: React.FC = () => {
 							minLength: 1,
 							maxLength: 256,
 						})}
+						onChange={e => setUsername(e.target.value)}
+						value={username}
 						placeholder='@username'
 					/>
 					{errors.tgUsername && (
@@ -118,6 +128,8 @@ const RegistrationForm: React.FC = () => {
 							minLength: 1,
 							maxLength: 64,
 						})}
+						onChange={e => setPassword(e.target.value)}
+						value={password}
 						placeholder='Пароль'
 					/>
 					{errors.password && (
@@ -143,7 +155,9 @@ const RegistrationForm: React.FC = () => {
 				onClick={(e) => {
 					e.preventDefault();
 					setIsModalOpen(true);
-				}}>
+					store.registration(login, username, password);
+				}}
+				>
 					Стать партнером
 				</button>
 
