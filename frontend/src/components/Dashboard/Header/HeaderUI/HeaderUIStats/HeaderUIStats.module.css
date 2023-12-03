@@ -11,18 +11,6 @@
     font-size: 20px;
 }
 
-.statsImg *{
-    fill: var(--Primary-Text-Color, #637381);
-}
-
 .statsText {
-    color: var(--Primary-Text-Color, #637381)
-}
-
-.statsBtn:hover .statsText {
     color: var(--blue-blue-light, #5475E5);
-}
-
-.statsBtn:hover .statsImg * {
-    fill: var(--blue-blue-light, #5475E5);
 }
