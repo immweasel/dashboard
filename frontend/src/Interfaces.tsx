@@ -4,3 +4,8 @@ export interface UserI {
     balance: number,
     avatar: string
 }
+
+
+//CreateLink Modal Interfaces
+
+//CreateLink Modal Interfaces
