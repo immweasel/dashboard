@@ -177,7 +177,6 @@
   color: red;
 }
 
-
 @media screen and (max-width: 1400px) {
   .formContainer {
     padding-bottom: 5vh;
@@ -189,18 +188,21 @@
     height: 520px;
     width: 400px;
   }
+
   .title {
     margin-left: -120px;
   }
 
   .subtitle {
-      margin: 0;
-      padding: 0;
-      margin-left: -120px;
+    margin: 0;
+    padding: 0;
+    margin-left: -120px;
   }
+
   .inputContainer {
     width: 370px;
   }
+
   .submitButton {
     width: 370px;
   }
